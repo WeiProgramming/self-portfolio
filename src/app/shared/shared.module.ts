@@ -5,6 +5,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NavbarComponent} from './partials/navbar/navbar.component';
 import {FooterComponent} from './partials/footer/footer.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {NgxPageScrollModule} from 'ngx-page-scroll';
 
 
 @NgModule({
@@ -13,14 +14,18 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPageScrollModule
   ],
   exports: [
     MaterialModule,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    NgxPageScrollModule
   ],
   declarations: [NavbarComponent,
-  FooterComponent]
+  FooterComponent,
+
+  ]
 })
 export class SharedModule { }

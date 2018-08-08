@@ -1,5 +1,16 @@
-mat-card-actions {
-  text-align: center;
+mat-card {
+  position: relative;
+}
+
+mat-card button {
+  position: absolute;
+  bottom: 2px;
+  left:50%;
+  transform: translateX(-50%);
 }
 
 .section {margin-bottom: 2%}
+
+.project-card {
+  height: 100%;
+}
