@@ -1,0 +1,14 @@
+.splash {
+  height: 80vh;
+  background-image: url('../../../../../assets/images/material-bg2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+mat-card {
+  position: relative;
+  top: 20%;
+  background-color: transparent;
+}
+
+.section {margin-bottom: 2%}

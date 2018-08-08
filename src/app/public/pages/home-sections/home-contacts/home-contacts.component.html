@@ -1,0 +1,28 @@
+<div class ="section contacts">
+  <h1>Contact Me</h1>
+  <mat-card>
+  <form [formGroup]="contactForm">
+    <fieldset>
+      <legend>Questions?</legend>
+      <mat-form-field>
+        <mat-icon matPrefix>people</mat-icon>
+        <input formControlName="name" matInput placeholder="Name"/>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-icon matPrefix>email</mat-icon>
+        <input formControlName="email" matInput placeholder="Email"/>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-icon matPrefix>short_text</mat-icon>
+        <textarea formControlName="body" matInput placeholder="Message">
+        </textarea>
+      </mat-form-field>
+    </fieldset>
+  </form>
+
+    <mat-card-actions >
+      <button mat-raised-button color="primary">Submit</button>
+      <button mat-raised-button>Reset</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
