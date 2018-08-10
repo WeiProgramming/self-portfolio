@@ -6,6 +6,7 @@ import {NavbarComponent} from './partials/navbar/navbar.component';
 import {FooterComponent} from './partials/footer/footer.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NgxPageScrollModule} from 'ngx-page-scroll';
+import { RouterModule} from '@angular/router';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import {NgxPageScrollModule} from 'ngx-page-scroll';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxPageScrollModule
+    NgxPageScrollModule,
+    RouterModule
   ],
   exports: [
     MaterialModule,

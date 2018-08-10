@@ -2,3 +2,12 @@
 
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: lightsteelblue;
+}

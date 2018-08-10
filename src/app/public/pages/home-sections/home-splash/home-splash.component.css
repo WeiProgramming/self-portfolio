@@ -12,3 +12,23 @@ mat-card {
 }
 
 .section {margin-bottom: 2%}
+
+
+.fas {
+  animation-name: icon;
+  animation-iteration-count: infinite;
+  animation-duration: .8s;
+  animation-direction: alternate;
+}
+
+@keyframes icon {
+  from {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);}
+  to {
+    transform: translateY(-10px);
+  }
+}
