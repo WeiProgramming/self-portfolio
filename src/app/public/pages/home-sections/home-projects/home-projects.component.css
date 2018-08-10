@@ -1,5 +1,6 @@
 mat-card {
   position: relative;
+  margin-bottom: 2%;
 }
 
 mat-card button {
@@ -12,5 +13,9 @@ mat-card button {
 .section {margin-bottom: 2%}
 
 .project-card {
+  margin-bottom: 2%;
+}
+
+.project-card mat-card{
   height: 100%;
 }

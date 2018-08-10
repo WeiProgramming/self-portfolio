@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/WeiPortfolioPage",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
