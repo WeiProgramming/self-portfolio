@@ -10,17 +10,20 @@ import { RouterModule } from '@angular/router';
 import { ROUTES} from './public.routes';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ResumeComponent } from './pages/resume/resume.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
     SharedModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forChild(ROUTES)
   ],
   exports: [
     HomeComponent,
+    ContactComponent,
     RouterModule
   ],
   declarations: [HomeComponent, HomeSplashComponent, HomeProjectsComponent, DefaultLayoutComponent, ContactComponent, ResumeComponent]
