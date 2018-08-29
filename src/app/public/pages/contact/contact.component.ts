@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -8,7 +8,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-  endpoint = 'http://localhost:8000/';
+  endpoint = 'http://weiportfoliobackend.us-west-1.elasticbeanstalk.com/api';
+  public showSuccess = false;
   contactForm = new FormGroup({
     name: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -19,8 +20,21 @@ export class ContactComponent implements OnInit {
 
   ngOnInit() {
   }
+  resetForm() {
+    this.contactForm.controls['name'].setValue('');
+    this.contactForm.controls['email'].setValue('');
+    this.contactForm.controls['body'].setValue('');
+  }
   sendEmail() {
-    // this.http.post(this.endpoint + 'email', this.contactForm);
+    const fd = new FormData();
+    console.log(this.contactForm.controls['email'].value);
+    fd.append('email', this.contactForm.controls['email'].value);
+    fd.append('body', this.contactForm.controls['body'].value);
+    this.http.post(this.endpoint + '/send', fd).subscribe(res => {
+      console.log('email sent');
+      this.contactForm.reset();
+      this.showSuccess = true;
+    });
   }
 
 }
