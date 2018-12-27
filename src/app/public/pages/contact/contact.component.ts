@@ -5,7 +5,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
   endpoint = 'http://weiportfoliobackend.us-west-1.elasticbeanstalk.com/api';
@@ -21,16 +21,10 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
   }
   resetForm() {
-    this.contactForm.controls['name'].setValue('');
-    this.contactForm.controls['email'].setValue('');
-    this.contactForm.controls['body'].setValue('');
+    this.contactForm.reset();
   }
   sendEmail() {
-    const fd = new FormData();
-    console.log(this.contactForm.controls['email'].value);
-    fd.append('email', this.contactForm.controls['email'].value);
-    fd.append('body', this.contactForm.controls['body'].value);
-    this.http.post(this.endpoint + '/send', fd).subscribe(res => {
+    this.http.post(this.endpoint + '/send', this.contactForm.value).subscribe(res => {
       console.log('email sent');
       this.contactForm.reset();
       this.showSuccess = true;

@@ -26,6 +26,12 @@ import {HttpClientModule} from '@angular/common/http';
     ContactComponent,
     RouterModule
   ],
-  declarations: [HomeComponent, HomeSplashComponent, HomeProjectsComponent, DefaultLayoutComponent, ContactComponent, ResumeComponent]
+  declarations: [
+    HomeComponent,
+    HomeSplashComponent,
+    HomeProjectsComponent,
+    DefaultLayoutComponent,
+    ContactComponent,
+    ResumeComponent]
 })
 export class PublicModule { }

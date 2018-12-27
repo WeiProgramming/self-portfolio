@@ -1,9 +1,100 @@
-<div class = "section splash">
-  <mat-card class = "headline-card text-center mat-elevation-z0">
-      <h1>{{"Wei Leung"| uppercase}} <i class="fas fa-laptop-code"></i></h1>
-    <mat-card-content>
-      <button mat-raised-button color="primary" routerLink="resume">Resume</button>
-    </mat-card-content>
-    <mat-card-subtitle>Simplicity</mat-card-subtitle>
-  </mat-card>
-</div>
+<section class = "splash">
+  <div class = "container">
+    <div class = "row">
+      <article class = "col-md-6">
+        <div class = "card" [@slideItems]='state'>
+          <!--<img class = "card-img-top" src="assets/images/rightdev-logo.png">-->
+          <div class="card-body">
+            <div class = "row subheader">
+              <div class = "col-md-4"><img class = "img-fluid" src = "assets/images/rightdev-logo.png"/></div>
+              <div class = "col-md-8"><h1 class = "card-title">RightDevice</h1></div>
+            </div>
+            <p>Medical Device Start Up gauged in connecting medical device representatives and patients with needed information so patients can determine the best course of action</p>
+            <h5>Task</h5>
+            <p>Assisted and lead in design and development, Deployed and maintained website</p>
+            <h5>Technology</h5>
+            <p>Laravel, JavaScript, Bootstrap, cPanel, HTML, CSS</p>
+            <a href="https://www.rightdevice.com/" target="_blank"><button class="btn btn-block btn-primary" color="primary">Site</button></a>
+          </div>
+        </div>
+      </article>
+
+      <!--<article class = "col-md-6">-->
+        <!--<div class = "card" [@slideItems]='state'>-->
+          <!--&lt;!&ndash;<img class = "card-img-top" src="assets/images/rightdev-logo.png">&ndash;&gt;-->
+          <!--<div class="card-body">-->
+            <!--<div class = "item-intro">-->
+              <!--<h1>RightDevice</h1>-->
+              <!--<img class = "img-fluid" src = "assets/images/rightdev-logo.png"/>-->
+            <!--</div>-->
+         <!--</div>-->
+        <!--</div>-->
+      <!--</article>-->
+
+      <article class = "col-md-6">
+        <div class = "card" [@slideItems]='state'>
+          <div class = "card-body">
+            <div class = "row subheader">
+              <div class = "col-md-4"><img class = "img-fluid" src = "assets/images/smartproperty-logo.png"/></div>
+              <div class = "col-md-8"><h1 class = "card-title">SmartProperty</h1></div>
+            </div>
+            <p>Property Saas management system that provides users to monitor and track properties and their assets</p>
+            <h5>Task</h5>
+            <p>Assisted and designed the first PWA for property software management</p>
+            <h5>Technology</h5>
+            <p>Angular 6, Angular Material Components, Service Workers, C#, Rxjs, .NET</p>
+            <a href="https://smartproperty.com/" target="_blank"><button class="btn btn-block btn-primary" color="primary">Site</button></a>
+          </div>
+        </div>
+      </article>
+
+      <article class = "col-md-6">
+        <div class = "card" [@slideItems]='state'>
+          <div class = "card-body">
+            <div class = "row subheader">
+              <div class = "col-md-4"><img class = "img-fluid" src = "assets/images/johnshipp-logo.png"/></div>
+              <div class = "col-md-8"><h1 class = "card-title">JohnShipp and Associates</h1></div>
+            </div>
+            <p>Internet development company providing web development services to various clients</p>
+            <h5>Task</h5>
+            <p>Assisted in development with one of their websites using backend</p>
+            <h5>Technology</h5>
+            <p>Laravel framework</p>
+            <a href="https://johnshipp.com/" target="_blank"><button class="btn btn-block btn-primary" color="primary">Site</button></a>
+          </div>
+        </div>
+      </article>
+      <article class = "col-md-6">
+        <div class = "card" [@slideItems]='state'>
+          <div class = "card-body">
+            <div class = "row  subheader">
+              <div class = "col-md-4"><img class = "img-fluid" src = "assets/images/swiftchange-logo.png"/></div>
+              <div class = "col-md-8"><h1 class = "card-title">SwiftChange</h1></div>
+            </div>
+            <p>Financial start up aimed towards allowed consumers to receive change through digital rather than physical change</p>
+            <h5>Task</h5>
+            <p>Assisted with backend end api development</p>
+            <h5>Technology</h5>
+            <p>Laravel framework</p>
+            <a href="https://www.getswiftchange.com/" target="_blank"><button class="btn btn-block btn-primary" color="primary">Site</button></a>
+          </div>
+        </div>
+      </article>
+      <article class = "col-md-6">
+        <div class = "card" [@slideItems]='state'>
+          <div class = "card-body">
+            <div class = "row subheader">
+              <div class = "col-md-4"><img class = "img-fluid" src = "assets/images/adg-logo.jpg"/></div>
+              <div class = "col-md-8"><h1 class = "card-title">Affinity Development Group</h1></div>
+            </div>
+            <h5>Task</h5>
+            <p>Front end engineer for ADG marketing agency, responsible for leading and developing websites for upcoming promotions for clients</p>
+            <h5>Technology</h5>
+            <p>.NET, HTML5, CSS3, SASS, TFS</p>
+            <a href="http://www.affinitydev.com/company.html" target="_blank"><button class="btn btn-block btn-primary" color="primary">Site</button></a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
