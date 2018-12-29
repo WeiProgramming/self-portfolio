@@ -4,11 +4,10 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 a {
-  text-decoration: none;
-}
-
-a:hover {
-  color: lightsteelblue;
+  color: black;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 header {
@@ -29,13 +28,13 @@ header {
 }
 
 .bg-blue {
-  background-color: lightblue;
+  background-color: #A5F2F3;
 }
 
-.bg-red {
-  background-color: darkred;
+.bg-pink {
+  background-color: #EE88CD;
 }
 
 .bg-green {
-  background-color: greenyellow;
+  background-color: #BCDD10;
 }

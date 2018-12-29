@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<main class = "content-container">
-  <router-outlet></router-outlet>
+<main class = "content-container" [@routeAnimate]="getData(myOutlet)">
+  <router-outlet #myOutlet = 'outlet'></router-outlet>
 </main>
 <!--<app-footer></app-footer>-->

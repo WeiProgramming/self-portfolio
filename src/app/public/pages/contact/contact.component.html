@@ -1,50 +1,52 @@
 
 <section class ="section contacts">
-  <div class ="container">
+  <div class ="container" >
     <header>
       <h2>Contact Me</h2>
       <img class = "img-fluid" src = "../../../../assets/images/blue-glow-line.png"/>
     </header>
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>
-          <h3>Wei Leung</h3>
-        </mat-card-title>
-        <mat-card-subtitle>
-          <h5>Software Engineer</h5>
-        </mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-        <h5>Email: wleung1995@hotmail.com</h5>
-        <h5>Phone: (619)-565-0881</h5>
-      </mat-card-content>
-    </mat-card>
-    <!--<mat-card>-->
-      <!--<form [formGroup]="contactForm" (ngSubmit)="sendEmail()">-->
-        <!--<fieldset>-->
-          <!--<legend>Questions? Feel Free To Contact Me</legend>-->
-          <!--<div *ngIf = "showSuccess" class="alert alert-success" role="alert">-->
-            <!--Yay! Your email went through, we will be in touch-->
-          <!--</div>-->
-          <!--<mat-form-field>-->
-            <!--<mat-icon matPrefix>people</mat-icon>-->
-            <!--<input formControlName="name" matInput placeholder="Name"/>-->
-          <!--</mat-form-field>-->
-          <!--<mat-form-field>-->
-            <!--<mat-icon matPrefix>email</mat-icon>-->
-            <!--<input formControlName="email" matInput placeholder="Email"/>-->
-          <!--</mat-form-field>-->
-          <!--<mat-form-field>-->
-            <!--<mat-icon matPrefix>short_text</mat-icon>-->
-            <!--<textarea formControlName="body" matInput placeholder="Message" matTextareaAutosize></textarea>-->
-          <!--</mat-form-field>-->
-        <!--</fieldset>-->
-
-        <!--<mat-card-actions>-->
-          <!--<button mat-raised-button type="submit" color="primary" > Submit</button>-->
-          <!--<button mat-raised-button (click)="resetForm()">Reset</button>-->
-        <!--</mat-card-actions>-->
-      <!--</form>-->
-    <!--</mat-card>-->
+    <div class = "card-container" [@appear]>
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            <h3>Wei Leung</h3>
+          </mat-card-title>
+          <mat-card-subtitle>
+            <h5>Software Engineer</h5>
+          </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <h5>Email: wleung1995@hotmail.com</h5>
+          <h5>Phone: (619)-565-0881</h5>
+        </mat-card-content>
+      </mat-card>
+    </div>
   </div>
+  <!--<mat-card>-->
+  <!--<form [formGroup]="contactForm" (ngSubmit)="sendEmail()">-->
+  <!--<fieldset>-->
+  <!--<legend>Questions? Feel Free To Contact Me</legend>-->
+  <!--<div *ngIf = "showSuccess" class="alert alert-success" role="alert">-->
+  <!--Yay! Your email went through, we will be in touch-->
+  <!--</div>-->
+  <!--<mat-form-field>-->
+  <!--<mat-icon matPrefix>people</mat-icon>-->
+  <!--<input formControlName="name" matInput placeholder="Name"/>-->
+  <!--</mat-form-field>-->
+  <!--<mat-form-field>-->
+  <!--<mat-icon matPrefix>email</mat-icon>-->
+  <!--<input formControlName="email" matInput placeholder="Email"/>-->
+  <!--</mat-form-field>-->
+  <!--<mat-form-field>-->
+  <!--<mat-icon matPrefix>short_text</mat-icon>-->
+  <!--<textarea formControlName="body" matInput placeholder="Message" matTextareaAutosize></textarea>-->
+  <!--</mat-form-field>-->
+  <!--</fieldset>-->
+
+  <!--<mat-card-actions>-->
+  <!--<button mat-raised-button type="submit" color="primary" > Submit</button>-->
+  <!--<button mat-raised-button (click)="resetForm()">Reset</button>-->
+  <!--</mat-card-actions>-->
+  <!--</form>-->
+  <!--</mat-card>-->
 </section>

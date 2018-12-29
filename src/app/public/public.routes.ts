@@ -12,19 +12,23 @@ export const ROUTES: Routes = [
     children: [
       {
         path: '',
-        component: HomeComponent
+        component: HomeComponent,
+        data: {pageName: 'home'}
       },
       {
         path: 'contact',
-        component: ContactComponent
+        component: ContactComponent,
+        data: {pageName: 'contact'}
       },
       {
         path: 'resume',
-        component: ResumeComponent
+        component: ResumeComponent,
+        data: {pageName: 'resume'}
       },
       {
         path: '**',
-        redirectTo: '/'
+        redirectTo: '/',
+        data: {pageName: 'home'}
       }
     ]
   }
