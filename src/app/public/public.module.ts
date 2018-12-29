@@ -9,6 +9,7 @@ import { ROUTES} from './public.routes';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ResumeComponent } from './pages/resume/resume.component';
 import {HttpClientModule} from '@angular/common/http';
+import { CompaniesComponent } from './pages/companies/companies.component';
 
 @NgModule({
   imports: [
@@ -28,6 +29,7 @@ import {HttpClientModule} from '@angular/common/http';
     HomeComponent,
     DefaultLayoutComponent,
     ContactComponent,
-    ResumeComponent]
+    ResumeComponent,
+    CompaniesComponent]
 })
 export class PublicModule { }

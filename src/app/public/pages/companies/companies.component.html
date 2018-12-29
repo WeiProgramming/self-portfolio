@@ -1,0 +1,27 @@
+<section class = "splash">
+  <header>
+    <h2>Companies</h2>
+    <img class = "img-fluid" src = "../../../../assets/images/blue-glow-line.png"/>
+  </header>
+  <div class = "container" [@slideItems]='items.length'>
+    <div class = "row">
+      <article *ngFor="let item of items" class = "col-md-6">
+        <div class = "card" >
+          <!--<img class = "card-img-top" src="assets/images/rightdev-logo.png">-->
+          <div class="card-body">
+            <div class = "row subheader">
+              <div class = "col-md-4"><img class = "img-fluid" src = {{item.siteLogo}}/></div>
+              <div class = "col-md-8"><h1 class = "card-title">{{item.heading}}</h1></div>
+            </div>
+            <p>{{item.description}}</p>
+            <h5>Task</h5>
+            <p>{{item.taskDesc}}</p>
+            <h5>Technology</h5>
+            <p>{{item.techDesc}}</p>
+            <a href={{item.siteLink}} target="_blank"><button class="btn btn-block btn-primary" color="primary">Site</button></a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
