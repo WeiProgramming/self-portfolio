@@ -1,11 +1,12 @@
 main {
-  padding-left: 15%;
+
 }
 
-.container-content {
+.content-container {
   position: relative;
 
-  * {
-    display: block;
-  }
+}
+
+.content-container >* {
+  display: block;
 }
