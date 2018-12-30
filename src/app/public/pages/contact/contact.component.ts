@@ -11,7 +11,7 @@ import {trigger, transition, query, style, animate, keyframes} from '@angular/an
     trigger('appear', [
       transition(':enter', [
         style({transform: 'translateY(100px)'}),
-        animate('.6s ease-out', keyframes([
+        animate('.6s 500ms ease-out', keyframes([
           style({opacity: 0, transform: 'translateY(-100px)'}),
           style({opacity: .2, transform: 'translateY(0px)'}),
           style({opacity: .6, transform: 'translateY(50px)'}),

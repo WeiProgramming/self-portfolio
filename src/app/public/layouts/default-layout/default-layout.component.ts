@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {trigger, query, group, style, transition, animate} from '@angular/animations';
+import {trigger, query, group, style, transition, animate, animateChild} from '@angular/animations';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
@@ -10,20 +10,21 @@ import {ActivatedRoute} from '@angular/router';
     trigger('routeAnimate', [
       transition('home => companies, companies => contact, contact => resume', [
         style({height: '!'}),
-        query(':enter', style({transform: 'translateX(100%)', opacity: '0'})),
-        query(':enter , :leave', style({position: 'absolute', left: 0, right: 0, top: 0})),
+        query(':enter', style({transform: 'translateY(100%)', opacity: '0'}), { optional: true }),
+        query(':enter , :leave', style({position: 'absolute', left: 0, right: 0, top: 0}), { optional: true }),
         group([
-          query(':enter', animate('.5s ease-out', style({transform: 'translateX(0)', opacity: '1'}))),
-          query(':leave', animate('.5s ease-out', style({transform: 'translateX(-100%)', opacity: '0'})))
+          query(':enter', animate('.5s ease-out', style({transform: 'translateY(0)', opacity: '1'})),{ optional: true }),
+          query(':leave', animate('.5s ease-out', style({transform: 'translateY(-100%)', opacity: '0'})), { optional: true }),
+          query('@slideItems, @appear', [animateChild()])
         ])
       ]),
       transition('companies => home, contact => companies, resume => contact', [
         style({height: '!'}),
-        query(':enter', style({transform: 'translateX(-100%)', opacity: '0'})),
-        query(':enter , :leave', style({position: 'absolute', left: '0', right: '0', top: '0', bottom: '0'})),
+        query(':enter', style({transform: 'translateY(-100%)', opacity: '0'}), { optional: true }),
+        query(':enter , :leave', style({position: 'absolute', left: '0', right: '0', top: '0', bottom: '0'}), { optional: true }),
         group([
-          query(':enter', animate('.5s ease-out', style({transform: 'translateX(0)', opacity: '1'}))),
-          query(':leave', animate('.5s ease-out', style({transform: 'translateX(100%)', opacity: '0'})))
+          query(':enter', animate('.5s ease-out', style({transform: 'translateY(0)', opacity: '1'})), { optional: true }),
+          query(':leave', animate('.5s ease-out', style({transform: 'translateY(100%)', opacity: '0'})), { optional: true })
         ])
       ])
     ])

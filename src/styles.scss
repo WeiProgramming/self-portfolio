@@ -27,6 +27,11 @@ header {
   }
 }
 
+section {
+  padding: 4% 0;
+  margin-bottom: 2%
+}
+
 .bg-blue {
   background-color: #A5F2F3;
 }
@@ -37,4 +42,8 @@ header {
 
 .bg-green {
   background-color: #BCDD10;
+}
+
+.bg-purple {
+  background-color: #a331dd;
 }

@@ -9,8 +9,8 @@ import {animate, keyframes, query, stagger, style, transition, trigger} from '@a
     trigger('slideItems', [
       transition('* => *', [
         query(':enter', style({transform: 'translateX(-200px)', opacity: '0'}), {optional: true}),
-        query(':enter', stagger('600ms', animate( '600ms ease-out', keyframes([
-          style({transform: 'translateX(-100px)', opacity: '.3'}),
+        query(':enter', stagger('500ms', animate( '400ms 500ms ease-out', keyframes([
+          style({transform: 'translateX(-100px)', opacity: '0'}),
           style({transform: 'translateX(0px)', opacity: '.5'}),
           style({transform: 'translateX(50px)', opacity: '.7'}),
           style({transform: 'translateX(0px)', opacity: '1'})
