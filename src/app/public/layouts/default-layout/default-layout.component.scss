@@ -5,8 +5,8 @@ main {
 .content-container {
   position: relative;
 
-}
+  > * {
+    display: block;
+  }
 
-.content-container >* {
-  display: block;
 }
