@@ -4,7 +4,7 @@
     margin: 1% 0;
 
     .card {
-      background-color: #DEF2F1;
+      //background-color: #DEF2F1;
       height: 100%;
       width: 100%;
       box-shadow: rgba(0,0,0,0.75) 8px 10px 20px -1px;
@@ -20,13 +20,17 @@
         .subheader {
           margin-bottom: 5%;
         }
+
+        card-content {
+          color: black;
+        }
       }
 
-      &:hover {
-        background-color: white;
-        box-shadow: rgba(0,0,0,0.75) 0px 0px 33px -1px inset;
-        color: black;
-      }
+      //&:hover {
+      //  background-color: white;
+      //  box-shadow: rgba(0,0,0,0.75) 0px 0px 33px -1px inset;
+      //  color: black;
+      //}
     }
   }
 }

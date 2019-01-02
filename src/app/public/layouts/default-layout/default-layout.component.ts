@@ -8,23 +8,23 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./default-layout.component.scss'],
   animations: [
     trigger('routeAnimate', [
-      transition('home => companies, companies => contact, contact => resume', [
-        style({height: '!'}),
-        query(':enter', style({transform: 'translateY(100%)', opacity: '0'}), { optional: true }),
+      transition('home => companies, companies => contact, contact => resume, home => *, companies => *, contact => *', [
+        style({height: '250vh'}),
+        query(':enter', style({transform: 'translateX(100%)', opacity: '0'}), { optional: true }),
         query(':enter , :leave', style({position: 'absolute', left: 0, right: 0, top: 0}), { optional: true }),
         group([
-          query(':enter', animate('.5s ease-out', style({transform: 'translateY(0)', opacity: '1'})),{ optional: true }),
-          query(':leave', animate('.5s ease-out', style({transform: 'translateY(-100%)', opacity: '0'})), { optional: true }),
+          query(':enter', animate('.5s ease-out', style({transform: 'translateX(0)', opacity: '1'})),{ optional: true }),
+          query(':leave', animate('.5s ease-out', style({transform: 'translateX(-100%)', opacity: '0'})), { optional: true }),
           query('@slideItems, @appear', [animateChild()])
         ])
       ]),
-      transition('companies => home, contact => companies, resume => contact', [
-        style({height: '!'}),
-        query(':enter', style({transform: 'translateY(-100%)', opacity: '0'}), { optional: true }),
+      transition('companies => home, contact => companies, resume => contact, resume => *',  [
+        style({height: '250vh'}),
+        query(':enter', style({transform: 'translateX(-100%)', opacity: '0'}), { optional: true }),
         query(':enter , :leave', style({position: 'absolute', left: '0', right: '0', top: '0'}), { optional: true }),
         group([
-          query(':enter', animate('.5s ease-out', style({transform: 'translateY(0)', opacity: '1'})), { optional: true }),
-          query(':leave', animate('.5s ease-out', style({transform: 'translateY(100%)', opacity: '0'})), { optional: true }),
+          query(':enter', animate('.5s ease-out', style({transform: 'translateX(0)', opacity: '1'})), { optional: true }),
+          query(':leave', animate('.5s ease-out', style({transform: 'translateX(100%)', opacity: '0'})), { optional: true }),
           query('@slideItems, @appear', [animateChild()])
         ])
       ])
