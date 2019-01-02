@@ -1,5 +1,27 @@
 <app-navbar></app-navbar>
 <div class = "content-container" [@routeAnimate]="getData(myOutlet)">
+  <div class="social-media-container">
+    <div class = "social-media-item">
+      <a href="https://www.facebook.com/wei.leung" target="_blank">
+        <i class="fab fa-facebook-square"></i>
+      </a>
+    </div>
+    <div class = "social-media-item">
+      <a href="https://www.linkedin.com/in/wei-leung/" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+    <div class = "social-media-item">
+      <a href="https://github.com/WeiProgramming" target="_blank">
+        <i class="fab fa-github-square"></i>
+      </a>
+    </div>
+    <div class = "social-media-item">
+      <a href="https://www.youtube.com/channel/UC-fh-wi4cwFt0ExaPsmmLbw?view_as=subscriber" target="_blank">
+        <i class="fab fa-youtube-square"></i>
+      </a>
+    </div>
+  </div>
 
   <router-outlet #myOutlet = 'outlet'></router-outlet>
 </div>
