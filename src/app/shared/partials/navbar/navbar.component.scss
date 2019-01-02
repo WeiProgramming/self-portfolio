@@ -5,14 +5,7 @@
   width: 100%;
   z-index: 100;
   position: static;
-
-  .home-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
-    width: 100%;
-  }
+  box-shadow: rgba(0, 0, 0, 0.75) 0px 10px 20px -1px;
 
   .navbar-item {
     height: 100px;
@@ -23,7 +16,7 @@
     justify-content: center;
     align-items: center;
     transition: width .3s;
-    background-color: #595959;
+    background-color: rgba(19, 19, 19, 0.87);
     color: #ff5200;
     //margin-bottom: 5%;
     //box-shadow: rgba(0, 0, 0, 0.75) 6px 10px 13px -1px;
@@ -37,5 +30,16 @@
       background-color: #DEF2F1;
       color: black;
     }
+  }
+
+  .home-logo {
+    height: 100px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(19, 19, 19, 0.87);
+    color: #ff5200;
   }
 }
