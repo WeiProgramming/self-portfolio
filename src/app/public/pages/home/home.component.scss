@@ -82,6 +82,14 @@ ul {
   }
 }
 
+.companies-section {
+  //margin-top: 0;
+}
+
 .about-section {
   margin-top: 0;
+
+  img {
+    box-shadow: rgba(0, 0, 0, 0.75) 8px 10px 20px -1px;
+  }
 }
