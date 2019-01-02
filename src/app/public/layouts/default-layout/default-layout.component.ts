@@ -8,7 +8,7 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./default-layout.component.scss'],
   animations: [
     trigger('routeAnimate', [
-      transition('home => companies, companies => contact, contact => resume, home => *, companies => *, contact => *', [
+      transition('home => companies, companies => contact, contact => resume', [
         style({height: '250vh'}),
         query(':enter', style({transform: 'translateX(100%)', opacity: '0'}), { optional: true }),
         query(':enter , :leave', style({position: 'absolute', left: 0, right: 0, top: 0}), { optional: true }),
@@ -18,7 +18,7 @@ import {ActivatedRoute} from '@angular/router';
           query('@slideItems, @appear', [animateChild()])
         ])
       ]),
-      transition('companies => home, contact => companies, resume => contact, resume => *',  [
+      transition('companies => home, contact => companies, resume => contact',  [
         style({height: '250vh'}),
         query(':enter', style({transform: 'translateX(-100%)', opacity: '0'}), { optional: true }),
         query(':enter , :leave', style({position: 'absolute', left: '0', right: '0', top: '0'}), { optional: true }),
