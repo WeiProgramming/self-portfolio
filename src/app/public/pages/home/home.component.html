@@ -134,37 +134,19 @@
   </article>
 </section>
 
-<!--<section class = "companies-section">-->
+<!--<section class = "companies-section" [@slideItems] = companies.length>-->
+  <!--<header>-->
+    <!--<h2>-->
+      <!--Companies-->
+    <!--</h2>-->
+  <!--</header>-->
   <!--<div class = "container">-->
-    <!--<div class = "row">-->
-      <!--<div class = "col-md-2">-->
+    <!--<div class = "row  justify-content-center">-->
+      <!--<div class = "col-md-2" *ngFor="let company of companies">-->
         <!--<mat-card>-->
-          <!--Hi-->
-        <!--</mat-card>-->
-      <!--</div>-->
-      <!--<div class = "col-md-2">-->
-        <!--<mat-card>-->
-          <!--Hi-->
-        <!--</mat-card>-->
-      <!--</div>-->
-      <!--<div class = "col-md-2">-->
-        <!--<mat-card>-->
-          <!--Hi-->
-        <!--</mat-card>-->
-      <!--</div>-->
-      <!--<div class = "col-md-2">-->
-        <!--<mat-card>-->
-          <!--Hi-->
-        <!--</mat-card>-->
-      <!--</div>-->
-      <!--<div class = "col-md-2">-->
-        <!--<mat-card>-->
-          <!--Hi-->
-        <!--</mat-card>-->
-      <!--</div>-->
-      <!--<div class = "col-md-2">-->
-        <!--<mat-card>-->
-          <!--Hi-->
+          <!--<mat-card-header>-->
+            <!--<mat-card-title><h5>{{company.heading}}</h5></mat-card-title>-->
+          <!--</mat-card-header>-->
         <!--</mat-card>-->
       <!--</div>-->
     <!--</div>-->

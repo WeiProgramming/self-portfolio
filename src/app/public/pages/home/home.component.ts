@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {animate, keyframes, query, stagger, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-home',
@@ -7,4 +6,6 @@ import {animate, keyframes, query, stagger, style, transition, trigger} from '@a
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  constructor() {
+  }
 }
