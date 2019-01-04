@@ -27,7 +27,7 @@ export class CompaniesComponent {
     this.items = [{
       heading: 'RightDevice',
       description: 'Medical Device Start Up gauged in connecting medical device' +
-      ' representatives and patients with needed information so patients can determine the best course of action',
+        ' representatives and patients with needed information so patients can determine the best course of action',
       taskDesc: 'Assisted and lead in design and development, Deployed and maintained website',
       techDesc: 'Laravel, JavaScript, Bootstrap, cPanel, HTML, CSS',
       siteLink: 'https://www.rightdevice.com/',
@@ -60,10 +60,10 @@ export class CompaniesComponent {
       {
         heading: 'Affinity Development Group',
         description: 'specializes in developing affinity and Customer Relationship Management programs for ' +
-        'clients with established brands and customer bases. It’s our goal at ADG to create and nurture customer ' +
-        'relationships through strategic products and services that are both relevant and valuable to a company’s specific audience.',
+          'clients with established brands and customer bases. It’s our goal at ADG to create and nurture customer ' +
+          'relationships through strategic products and services that are both relevant and valuable to a company’s specific audience.',
         taskDesc: 'Front end engineer for ADG marketing agency, responsible for leading and developing websites for ' +
-        'upcoming promotions for clients',
+          'upcoming promotions for clients',
         techDesc: '.NET, HTML5, CSS3, SASS, TFS',
         siteLink: 'http://www.affinitydev.com/company.html',
         siteLogo: 'assets/images/adg-logo.jpg'

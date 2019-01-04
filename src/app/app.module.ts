@@ -18,7 +18,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     SharedModule,
     PublicModule,
-    RouterModule.forRoot(APPROUTES),
+    RouterModule.forRoot(APPROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]
