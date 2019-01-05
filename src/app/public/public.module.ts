@@ -9,7 +9,7 @@ import { ROUTES} from './public.routes';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ResumeComponent } from './pages/resume/resume.component';
 import {HttpClientModule} from '@angular/common/http';
-import { CompaniesComponent } from './pages/companies/companies.component';
+import { AboutMeComponent } from './pages/about-me/about-me.component';
 
 @NgModule({
   imports: [
@@ -21,8 +21,6 @@ import { CompaniesComponent } from './pages/companies/companies.component';
     RouterModule.forChild(ROUTES)
   ],
   exports: [
-    HomeComponent,
-    ContactComponent,
     RouterModule
   ],
   declarations: [
@@ -30,6 +28,6 @@ import { CompaniesComponent } from './pages/companies/companies.component';
     DefaultLayoutComponent,
     ContactComponent,
     ResumeComponent,
-    CompaniesComponent]
+    AboutMeComponent]
 })
 export class PublicModule { }

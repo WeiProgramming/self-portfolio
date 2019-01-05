@@ -101,3 +101,36 @@ ul {
     box-shadow: rgba(0, 0, 0, 0.75) 8px 10px 20px -1px;
   }
 }
+
+.timeline-section {
+  * {border: 1px solid green;
+  color: black}
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    background-color: black;
+  }
+  .content-wrap {
+    position: relative;
+    background-color: white;
+    width:50%;
+  }
+  .content-wrap::before { //circle here
+
+  }
+  .content {
+
+  }
+  .left {
+    left: -10%;
+  }
+  .right{
+    left:60%;
+  }
+}

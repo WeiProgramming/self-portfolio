@@ -3,7 +3,7 @@ import { HomeComponent} from './pages/home/home.component';
 import {ContactComponent} from './pages/contact/contact.component';
 import {ResumeComponent} from './pages/resume/resume.component';
 import {DefaultLayoutComponent} from './layouts/default-layout/default-layout.component';
-import {CompaniesComponent} from './pages/companies/companies.component';
+import {AboutMeComponent} from './pages/about-me/about-me.component';
 
 
 export const ROUTES: Routes = [
@@ -17,9 +17,9 @@ export const ROUTES: Routes = [
         data: {pageName: 'home'}
       },
       {
-        path: 'companies',
-        component: CompaniesComponent,
-        data: {pageName: 'companies'}
+        path: 'about',
+        component: AboutMeComponent,
+        data: {pageName: 'about'}
       },
       {
         path: 'contact',
