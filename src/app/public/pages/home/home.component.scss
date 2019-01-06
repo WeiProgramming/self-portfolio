@@ -2,9 +2,9 @@ img {
   margin-bottom: 3%;
 }
 
-ul {
-  color: aliceblue;
-}
+//ul {
+//  color: aliceblue;
+//}
 
 .splash-section {
   background-image: url('https://images.unsplash.com/photo-1545498967-7b51dcb8bfd9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1226&q=80');
@@ -13,6 +13,9 @@ ul {
   position: relative;
   height: 80vh;
   margin-top: 0%;
+  p, li {
+    color: aliceblue;
+  }
 
   .splash-overlay {
     position: absolute;
@@ -83,7 +86,7 @@ ul {
 }
 
 .companies-section {
-  margin-top: 0;
+  //margin-top: 0;
   .card {
     margin-bottom: 5%;
     box-shadow: rgba(0, 0, 0, 0.75) 8px 10px 20px -1px;
@@ -103,26 +106,57 @@ ul {
 }
 
 .timeline-section {
-  * {border: 1px solid green;
-  color: black}
+  margin-top: 0;
+  //* {border: 1px solid green;
+  //color: black}
   position: relative;
   &:before {
     content: "";
     position: absolute;
-    width: 6px;
+    //width: 5px;
     height: 100%;
     top: 0;
     bottom: 0;
     left: 50%;
-    background-color: black;
+    //background-color: black;
   }
   .content-wrap {
     position: relative;
     background-color: white;
     width:50%;
+    padding: 2%;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.75) 8px 10px 20px -1px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.75) 8px 10px 20px -1px;
+    box-shadow: rgba(0, 0, 0, 0.75) 8px 10px 20px -1px;
   }
-  .content-wrap::before { //circle here
+  .left::before { //circle here
+    content: "\f060";
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 3rem;
+    position: absolute;
+    color: orange;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4);
+    //width: 25px;
+    //height: 25px;
+    //background-color: black;
+    right:-24%;
+    top: 30%;
+    border-radius: 50%;
+  }
 
+  .right::before {
+    content: "\f061";
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 3rem;
+    position: absolute;
+    color:orange;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4);
+    //width: 25px;
+    //height: 25px;
+    //background-color: black;
+    left:-24%;
+    top: 30%;
+    border-radius: 50%;
   }
   .content {
 
