@@ -15,7 +15,7 @@ import {ActivatedRoute} from '@angular/router';
         group([
           query(':enter', animate('.5s ease-out', style({transform: 'translateX(0)', opacity: '1'})),{ optional: true }),
           query(':leave', animate('.5s ease-out', style({transform: 'translateX(-100%)', opacity: '0'})), { optional: true }),
-          query('@slideItems, @appear', [animateChild()])
+          query('@slideItems, @appear, @slide-left', [animateChild()])
         ])
       ]),
       transition('about => home, contact => about, resume => *',  [
@@ -25,7 +25,7 @@ import {ActivatedRoute} from '@angular/router';
         group([
           query(':enter', animate('.5s ease-out', style({transform: 'translateX(0)', opacity: '1'})), { optional: true }),
           query(':leave', animate('.5s ease-out', style({transform: 'translateX(100%)', opacity: '0'})), { optional: true }),
-          query('@slideItems, @appear', [animateChild()])
+          query('@slideItems, @appear, @slide-left', [animateChild()])
         ])
       ])
     ])
