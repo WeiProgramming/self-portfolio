@@ -19,7 +19,11 @@
     0px 8px 13px rgba(0,0,0,0.1),
     0px 18px 23px rgba(0,0,0,0.1);
     i {
+      transition: .5s ease-in-out;
       color: white;
+      &:hover {
+        color: orange;
+      }
     }
   }
 
