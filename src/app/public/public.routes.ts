@@ -22,7 +22,7 @@ export const ROUTES: Routes = [
         data: {pageName: 'about'}
       },
       {
-        path: 'contact',
+        path: 'journey',
         component: ContactComponent,
         data: {pageName: 'contact'}
       },
@@ -34,7 +34,6 @@ export const ROUTES: Routes = [
       {
         path: '**',
         redirectTo: '/',
-        data: {pageName: 'home'}
       }
     ]
   }

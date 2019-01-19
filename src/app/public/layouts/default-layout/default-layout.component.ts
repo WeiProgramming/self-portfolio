@@ -8,7 +8,7 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./default-layout.component.scss'],
   animations: [
     trigger('routeAnimate', [
-      transition('home => *, about => contact, contact => resume', [
+      transition('home => about, about => contact, contact => resume', [
         style({height: '200vh'}),
         query(':enter', style({transform: 'translateX(100%)', opacity: '0'}), { optional: true }),
         query(':enter , :leave', style({position: 'absolute', left: 0, right: 0, top: 0}), { optional: true }),
@@ -18,8 +18,8 @@ import {ActivatedRoute} from '@angular/router';
           query('@slideItems, @appear, @slide-left', [animateChild()])
         ])
       ]),
-      transition('about => home, contact => about, resume => *',  [
-        style({height: '250vh'}),
+      transition('contact => about, resume => *, about => home',  [
+        style({height: '200vh'}),
         query(':enter', style({transform: 'translateX(-100%)', opacity: '0'}), { optional: true }),
         query(':enter , :leave', style({position: 'absolute', left: '0', right: '0', top: '0'}), { optional: true }),
         group([
