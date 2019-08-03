@@ -1,1 +1,3 @@
-export const PasswordModel 
+export interface PasswordModel {
+  password: string;
+}

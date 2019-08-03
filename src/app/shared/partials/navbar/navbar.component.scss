@@ -43,22 +43,12 @@
 //    color: #ff5200;
 //  }
 //}
-.notmoved {
+#navContainer {
   background-color: transparent;
-  z-index: 1000;
   width: 100%;
   font-size: 1.5rem;
   color: white;
   z-index: 1000;
-  position: fixed;
-  transition: .5s ease-in-out;
+  position: absolute;
 }
-.moved {
-  background-color: gray;
-  position: fixed;
-  width: 100%;
-  font-size: 2rem;
-  color: white;
-  z-index: 1000;
-  transition: .5s ease-in-out;
-}
+

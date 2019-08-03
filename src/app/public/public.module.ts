@@ -10,6 +10,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ResumeComponent } from './pages/resume/resume.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AboutMeComponent } from './pages/about-me/about-me.component';
+import {CompaniesComponent} from './pages/companies/companies.component';
 
 @NgModule({
   imports: [
@@ -28,6 +29,7 @@ import { AboutMeComponent } from './pages/about-me/about-me.component';
     DefaultLayoutComponent,
     ContactComponent,
     ResumeComponent,
-    AboutMeComponent]
+    AboutMeComponent,
+    CompaniesComponent]
 })
 export class PublicModule { }

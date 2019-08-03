@@ -101,29 +101,6 @@
   </mat-card>
 </section>
 
-
-<section class = "companies-section" [@slideItems] = items.length #companyBlock>
-  <header>
-    <h2>
-      Companies
-    </h2>
-  </header>
-  <div class = "container">
-    <div class = "row justify-content-center">
-      <div class = "col-md-4" *ngFor="let company of items">
-        <div class="card">
-          <img class="card-img-top" src= {{company.siteLogo}} alt="Companies card">
-          <div class="card-body">
-            <h5 class="card-title">{{company.heading}}</h5>
-            <p class="card-text">{{company.description}}</p>
-            <a href={{company.siteLink}} target="_blank" class="btn btn-primary bg-orange">Visit Site</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class ="contact-section">
   <div class ="container" >
     <header>

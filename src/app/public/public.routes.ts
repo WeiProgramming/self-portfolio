@@ -4,6 +4,7 @@ import {ContactComponent} from './pages/contact/contact.component';
 import {ResumeComponent} from './pages/resume/resume.component';
 import {DefaultLayoutComponent} from './layouts/default-layout/default-layout.component';
 import {AboutMeComponent} from './pages/about-me/about-me.component';
+import {CompaniesComponent} from './pages/companies/companies.component';
 
 
 export const ROUTES: Routes = [
@@ -25,6 +26,11 @@ export const ROUTES: Routes = [
         path: 'journey',
         component: ContactComponent,
         data: {pageName: 'contact'}
+      },
+      {
+        path: 'company',
+        component: CompaniesComponent,
+        data: {pageName: 'company'}
       },
       {
         path: 'resume',
