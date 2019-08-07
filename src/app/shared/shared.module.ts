@@ -13,9 +13,9 @@ import { RouterModule} from '@angular/router';
   imports: [
     CommonModule,
     BrowserAnimationsModule,
-    MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    MaterialModule,
     NgxPageScrollModule,
     RouterModule
   ],
@@ -23,7 +23,8 @@ import { RouterModule} from '@angular/router';
     MaterialModule,
     NavbarComponent,
     FooterComponent,
-    NgxPageScrollModule
+    NgxPageScrollModule,
+    ReactiveFormsModule
   ],
   declarations: [NavbarComponent,
   FooterComponent,

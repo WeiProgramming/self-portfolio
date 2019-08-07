@@ -1,4 +1,8 @@
 import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {PasswordDialogComponent} from '../../../public/components/password-dialog/password-dialog.component';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -16,10 +20,22 @@ export class NavbarComponent implements OnInit {
   //   }
   //   console.log(this.scrolledState);
   // }
-
-  constructor() { }
+  private resumePasword: string = 'resumeopen';
+  constructor( public dialog: MatDialog, private router: Router ) { }
 
   ngOnInit() {
+
     // this.scrolledState = 'notmoved';
+  }
+
+  openDialog(): void {
+    const dialogRef =this.dialog.open(PasswordDialogComponent, {
+      data: {password: ''}
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if(result === this.resumePasword) {
+        this.router.navigate(['resume']);
+      }
+    });
   }
 }

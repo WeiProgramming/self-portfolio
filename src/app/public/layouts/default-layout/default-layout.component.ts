@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {trigger, query, group, style, transition, animate, animateChild} from '@angular/animations';
 import {ActivatedRoute} from '@angular/router';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-default-layout',
@@ -36,6 +37,7 @@ export class DefaultLayoutComponent implements OnInit {
   constructor(public route: ActivatedRoute) { }
 
   ngOnInit() {
+
   }
   getData(outlet): string {
     return outlet.activatedRoute.data.value['pageName'];

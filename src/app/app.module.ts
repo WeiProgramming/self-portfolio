@@ -7,6 +7,7 @@ import {PublicModule} from './public/public.module';
 import { RouterModule} from '@angular/router';
 import {APPROUTES} from './app-routing.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -16,6 +17,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     SharedModule,
     PublicModule,
     RouterModule.forRoot(APPROUTES)

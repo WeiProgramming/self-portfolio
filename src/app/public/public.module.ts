@@ -11,6 +11,7 @@ import { ResumeComponent } from './pages/resume/resume.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AboutMeComponent } from './pages/about-me/about-me.component';
 import {CompaniesComponent} from './pages/companies/companies.component';
+import { PasswordDialogComponent } from './components/password-dialog/password-dialog.component';
 
 @NgModule({
   imports: [
@@ -24,12 +25,16 @@ import {CompaniesComponent} from './pages/companies/companies.component';
   exports: [
     RouterModule
   ],
+  entryComponents: [
+    PasswordDialogComponent
+  ],
   declarations: [
     HomeComponent,
     DefaultLayoutComponent,
     ContactComponent,
     ResumeComponent,
     AboutMeComponent,
-    CompaniesComponent]
+    CompaniesComponent,
+    PasswordDialogComponent]
 })
 export class PublicModule { }
