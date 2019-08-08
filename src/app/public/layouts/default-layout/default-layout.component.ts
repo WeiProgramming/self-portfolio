@@ -34,10 +34,9 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class DefaultLayoutComponent implements OnInit {
 
-  constructor(public route: ActivatedRoute) { }
+  constructor() { }
 
   ngOnInit() {
-
   }
   getData(outlet): string {
     return outlet.activatedRoute.data.value['pageName'];

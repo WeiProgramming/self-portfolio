@@ -1,5 +1,8 @@
 import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
 import {animate, keyframes, query, stagger, style, transition, trigger} from '@angular/animations';
+import {ActivatedRoute} from '@angular/router';
+import {RouteService} from '../../services/RouteService/route.service';
+import {getCurrentUrlData, RouteSubject} from '../../Observables/portfolio.routes';
 
 @Component({
   selector: 'app-home',
@@ -80,12 +83,15 @@ export class HomeComponent implements OnInit {
   //     console.log('true');
   //   }
   // }
-  constructor() {}
+
+  constructor(private route: ActivatedRoute, private routeService: RouteService) {}
 
   ngOnInit(): void {
     // this.scrollInAt = this.companyBlock.nativeElement.offsetTop + this.companyBlock.nativeElement.offsetHeight + 200;
     // this.items = [];
     // // console.log(this.companyBlock.nativeElement.offsetTop);
     // console.log(this.companyBlock);
+    console.log('run home');
+    this.routeService.updateUrlData(this.route.snapshot.data['pageName']);
   }
 }

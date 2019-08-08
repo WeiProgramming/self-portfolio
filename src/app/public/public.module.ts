@@ -9,7 +9,6 @@ import { ROUTES} from './public.routes';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ResumeComponent } from './pages/resume/resume.component';
 import {HttpClientModule} from '@angular/common/http';
-import { AboutMeComponent } from './pages/about-me/about-me.component';
 import {CompaniesComponent} from './pages/companies/companies.component';
 import { PasswordDialogComponent } from './components/password-dialog/password-dialog.component';
 
@@ -33,7 +32,6 @@ import { PasswordDialogComponent } from './components/password-dialog/password-d
     DefaultLayoutComponent,
     ContactComponent,
     ResumeComponent,
-    AboutMeComponent,
     CompaniesComponent,
     PasswordDialogComponent]
 })

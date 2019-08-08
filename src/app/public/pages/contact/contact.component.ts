@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {trigger, transition, query, style, animate, keyframes} from '@angular/animations';
+import {RouteService} from '../../services/RouteService/route.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -31,10 +33,12 @@ export class ContactComponent implements OnInit {
   });
   contactState = 'close';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, public routeService: RouteService, public route: ActivatedRoute) { }
 
   ngOnInit() {
     this.contactState = 'open';
+    this.routeService.updateUrlData(this.route.snapshot.data['pageName']);
+
   }
   resetForm() {
     this.contactForm.reset();

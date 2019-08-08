@@ -1,46 +1,18 @@
-
-
-<!--<nav class = "side-container">-->
-  <!--<a routerLink="/" class ="home-logo">-->
-    <!--<em>-->
-      <!--<h1>{{'Wei Leung' | uppercase}}</h1>-->
-    <!--</em>-->
-  <!--</a>-->
-
-
-  <!--<a routerLink="/" class ="navbar-item">-->
-    <!--<h4>Home</h4>-->
-  <!--</a>-->
-
-  <!--<a routerLink="/about" class ="navbar-item">-->
-    <!--<h4>About Me</h4>-->
-  <!--</a>-->
-
-  <!--<a routerLink="/contact"  class ="navbar-item">-->
-    <!--<h4>Contact</h4>-->
-  <!--</a>-->
-
-  <!--<a routerLink="/resume" class ="navbar-item">-->
-    <!--<h4>Resume</h4>-->
-  <!--</a>-->
-<!--</nav>-->
-
-<nav class="navbar navbar-expand-lg navbar-dark" id="navContainer">
+<nav class="navbar navbar-expand-lg" id="navContainer" [ngClass]="navType === 'home'? 'home' : '' " >
   <div class = "container">
-    <a class="navbar-brand" routerLink="/" >Wei Leung</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav custom-nav-list">
         <li class="nav-item">
           <a class="nav-link" routerLink="/">Home</a>
         </li>
         <li>
           <a class="nav-link" routerLink="company">Company</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/about">About</a>
+        <li>
+          <a class="nav-link custom-nav-brand" routerLink="/">Wei</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/journey">Journey</a>

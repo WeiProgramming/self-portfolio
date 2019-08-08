@@ -1,4 +1,6 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {RouteService} from '../../services/RouteService/route.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-companies',
@@ -57,11 +59,13 @@ export class CompaniesComponent implements OnInit {
       siteLogo: 'https://images.unsplash.com/photo-1538356111053-748a48e1acb8?ixlib=rb-' +
       '1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80'
     }];
-  constructor() { }
+  constructor(public routeService: RouteService, public route: ActivatedRoute) { }
 
   ngOnInit() {
     // this.scrollInAt = this.companyBlock.nativeElement.offsetTop + this.companyBlock.nativeElement.offsetHeight + 200;
     this.items = this.data;
+    this.routeService.updateUrlData(this.route.snapshot.data['pageName']);
+
   }
 
 }

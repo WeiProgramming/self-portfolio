@@ -3,7 +3,6 @@ import { HomeComponent} from './pages/home/home.component';
 import {ContactComponent} from './pages/contact/contact.component';
 import {ResumeComponent} from './pages/resume/resume.component';
 import {DefaultLayoutComponent} from './layouts/default-layout/default-layout.component';
-import {AboutMeComponent} from './pages/about-me/about-me.component';
 import {CompaniesComponent} from './pages/companies/companies.component';
 
 
@@ -16,11 +15,6 @@ export const ROUTES: Routes = [
         path: '',
         component: HomeComponent,
         data: {pageName: 'home'}
-      },
-      {
-        path: 'about',
-        component: AboutMeComponent,
-        data: {pageName: 'about'}
       },
       {
         path: 'journey',

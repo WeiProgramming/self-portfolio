@@ -1,8 +1,10 @@
-import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, EventEmitter, HostListener, OnInit, Output, ViewChild} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {PasswordDialogComponent} from '../../../public/components/password-dialog/password-dialog.component';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
+import {RouteSubject, updateUrlData} from '../../../public/Observables/portfolio.routes';
+import {RouteService} from '../../../public/services/RouteService/route.service';
 
 @Component({
   selector: 'app-navbar',
@@ -20,20 +22,26 @@ export class NavbarComponent implements OnInit {
   //   }
   //   console.log(this.scrolledState);
   // }
-  private resumePasword: string = 'resumeopen';
-  constructor( public dialog: MatDialog, private router: Router ) { }
+  @Output() navEmit = new EventEmitter<string>();
+  private resumePassword = 'resumeopen';
+  public navType: string;
+  constructor( public dialog: MatDialog, private router: Router, private routeService: RouteService) { }
 
   ngOnInit() {
-
     // this.scrolledState = 'notmoved';
+    this.routeService.getUrlData().subscribe(res => {
+      this.navType = res;
+      console.log(this.navType);
+    });
+    console.log('run nav');
   }
 
   openDialog(): void {
-    const dialogRef =this.dialog.open(PasswordDialogComponent, {
+    const dialogRef = this.dialog.open(PasswordDialogComponent, {
       data: {password: ''}
     });
     dialogRef.afterClosed().subscribe(result => {
-      if(result === this.resumePasword) {
+      if(result === this.resumePassword) {
         this.router.navigate(['resume']);
       }
     });
